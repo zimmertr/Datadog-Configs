@@ -10,7 +10,7 @@ instances:
 
     private_key_file: PRIVATEKEY
     # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
-    # add_missing_keys: True      # optional, leaving blank defaults to False
+    add_missing_keys: True      # optional, leaving blank defaults to False
 
     tags:
       - service:ssh
@@ -31,7 +31,7 @@ instances:
 
     # private_key_file: /SaturnPool/Keys/home/NGINX 
     # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
-    # add_missing_keys: True      # optional, leaving blank defaults to False
+    add_missing_keys: True      # optional, leaving blank defaults to False
 
     tags:
       - service:ssh
@@ -51,7 +51,7 @@ instances:
 
     # private_key_file: /SaturnPool/Keys/home/NGINX 
     # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
-    # add_missing_keys: True      # optional, leaving blank defaults to False
+    add_missing_keys: True      # optional, leaving blank defaults to False
 
     tags:
       - service:ssh
@@ -72,7 +72,7 @@ instances:
 
     # private_key_file: /SaturnPool/Keys/home/NGINX 
     # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
-    # add_missing_keys: True      # optional, leaving blank defaults to False
+    add_missing_keys: True      # optional, leaving blank defaults to False
 
     tags:
       - service:ssh
@@ -93,7 +93,7 @@ instances:
 
     private_key_file: PRIVATEKEY
     # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
-    # add_missing_keys: True      # optional, leaving blank defaults to False
+    add_missing_keys: True      # optional, leaving blank defaults to False
 
     tags:
       - service:ssh
@@ -114,7 +114,7 @@ instances:
 
     private_key_file: PRIVATEKEY
     # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
-    # add_missing_keys: True      # optional, leaving blank defaults to False
+    add_missing_keys: True      # optional, leaving blank defaults to False
 
     tags:
       - service:ssh
@@ -135,7 +135,7 @@ instances:
 
     private_key_file: PRIVATEKEY
     # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
-    # add_missing_keys: True      # optional, leaving blank defaults to False
+    add_missing_keys: True      # optional, leaving blank defaults to False
 
     tags:
       - service:ssh
@@ -156,7 +156,7 @@ instances:
 
     private_key_file: PRIVATEKEY
     # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
-    # add_missing_keys: True      # optional, leaving blank defaults to False
+    add_missing_keys: True      # optional, leaving blank defaults to False
 
     tags:
       - service:ssh
@@ -177,7 +177,7 @@ instances:
 
     # private_key_file: /SaturnPool/Keys/home/NGINX 
     # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
-    # add_missing_keys: True      # optional, leaving blank defaults to False
+    add_missing_keys: True      # optional, leaving blank defaults to False
 
     tags:
       - service:ssh
@@ -199,7 +199,7 @@ instances:
 
     # private_key_file: /SaturnPool/Keys/home/NGINX 
     # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
-    # add_missing_keys: True      # optional, leaving blank defaults to False
+    add_missing_keys: True      # optional, leaving blank defaults to False
 
     tags:
       - service:ssh
@@ -220,7 +220,7 @@ instances:
 
     # private_key_file: /SaturnPool/Keys/home/NGINX 
     # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
-    # add_missing_keys: True      # optional, leaving blank defaults to False
+    add_missing_keys: True      # optional, leaving blank defaults to False
 
     tags:
       - service:ssh
