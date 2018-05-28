@@ -1,0 +1,26 @@
+init_config:
+    default_timeout: 4
+
+instances:
+    - name: BIND
+
+      hostname: io.sol.milkyway
+      nameserver: 192.168.1.100
+      # nameserver_port: 53
+
+      timeout: 1
+      # record_type: A
+
+      tags:
+        - service:dns
+        - domain:sol.milkyway
+        - environment:production
+        - host:centos
+        - integration:dnscheck
+        - location:private
+
+    # See https://github.com/DataDog/dd-agent/pull/2849 for more details.
+    # - name: nxdomain_example
+    #   hostname: nxdomain.example.org
+    #   nameserver: 127.0.0.1
+    #   record_type: NXDOMAIN

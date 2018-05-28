@@ -1,0 +1,23 @@
+init_config:
+
+instances:
+  - host: saturn.sol.milkyway
+    # port: 22                    # optional, leaving blank defaults to port 22
+    # sftp_check: True            # optional, leaving blank defaults to True
+
+    username: USERNAME
+    password: PASSWORD
+
+    # private_key_file: /SaturnPool/Keys/home/NGINX 
+    # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
+    # add_missing_keys: True      # optional, leaving blank defaults to False
+
+    tags:
+      - service:ssh
+      - domain:sol.milkyway
+      - environment:production
+      - host:proxmox
+      - integration:sshcheck
+      - auth:password
+      - class:hardware
+      - subclass:hypervisor

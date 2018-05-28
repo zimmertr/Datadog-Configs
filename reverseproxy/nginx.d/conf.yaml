@@ -1,0 +1,34 @@
+init_config:
+
+instances:
+  - nginx_status_url: http://localhost:81/nginx_status/
+  #   ssl_validation: False
+  #   skip_proxy: false
+  
+  #   user: USER
+  #   password: PASSWORD
+  
+  #   use_plus_api: False
+  #   plus_api_version: 2
+
+  - type: file
+    path: /var/log/nginx/access.log
+    service: nginx
+    source: nginx
+    sourcecategory: http_web_access
+    tags: 
+      - service:nginx
+      - integration:logging
+      - environment:production
+      - logging:connections
+
+  - type: file
+    path: /var/log/nginx/error.log
+    service: nginx
+    source: nginx
+    sourcecategory: http_web_access
+    tags:
+      - service:nginx
+      - integration:logging
+      - environment:production
+      - logging:error

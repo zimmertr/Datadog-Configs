@@ -1,0 +1,233 @@
+init_config:
+
+instances:
+  - host: tjzimmerman.com
+    # port: 22                    # optional, leaving blank defaults to port 22
+    # sftp_check: True            # optional, leaving blank defaults to True
+
+    username: USERNAME
+    # password: 
+
+    private_key_file: PRIVATEKEY
+    # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
+    # add_missing_keys: True      # optional, leaving blank defaults to False
+
+    tags:
+      - service:ssh
+      - url:tjzimmerman.com
+      - domain:tjzimmerman.com
+      - environment:production
+      - host:centos
+      - integration:sshcheck
+      - auth:sshkey
+      - class:ec2
+
+  - host: io.sol.milkyway
+    # port: 22                    # optional, leaving blank defaults to port 22
+    # sftp_check: True            # optional, leaving blank defaults to True
+
+    username: USERNAME
+    password: PASSWORD
+
+    # private_key_file: /SaturnPool/Keys/home/NGINX 
+    # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
+    # add_missing_keys: True      # optional, leaving blank defaults to False
+
+    tags:
+      - service:ssh
+      - domain:sol.milkyway
+      - environment:p
+      - host:centos
+      - integration:sshcheck
+      - auth:password
+      - class:virtualmachine
+
+  - host: janus.sol.milkyway
+    # port: 22                    # optional, leaving blank defaults to port 22
+    # sftp_check: True            # optional, leaving blank defaults to True
+
+    username: USERNAME
+    password: PASSWORD
+
+    # private_key_file: /SaturnPool/Keys/home/NGINX 
+    # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
+    # add_missing_keys: True      # optional, leaving blank defaults to False
+
+    tags:
+      - service:ssh
+      - domain:sol.milkyway
+      - environment:personal
+      - host:centos
+      - integration:sshcheck
+      - auth:password 
+      - class:virtualmachine
+
+
+  - host: mimas.sol.milkyway
+    # port: 22                    # optional, leaving blank defaults to port 22
+    # sftp_check: True            # optional, leaving blank defaults to True
+
+    username: USERNAME
+    password: PASSWORD
+
+    # private_key_file: /SaturnPool/Keys/home/NGINX 
+    # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
+    # add_missing_keys: True      # optional, leaving blank defaults to False
+
+    tags:
+      - service:ssh
+      - domain:sol.milkyway
+      - environment:production
+      - host:centos
+      - integration:sshcheck
+      - auth:password 
+      - class:virtualmachine
+
+
+  - host: pluto.sol.milkyway
+    # port: 22                    # optional, leaving blank defaults to port 22
+    # sftp_check: True            # optional, leaving blank defaults to True
+
+    username: USERNAME
+    # password: 
+
+    private_key_file: PRIVATEKEY
+    # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
+    # add_missing_keys: True      # optional, leaving blank defaults to False
+
+    tags:
+      - service:ssh
+      - domain:sol.milkyway
+      - environment:production
+      - host:coreos
+      - integration:sshcheck
+      - auth:sshkey 
+      - class:virtualmachine
+
+
+  - host: charon.sol.milkyway
+    # port: 22                    # optional, leaving blank defaults to port 22
+    # sftp_check: True            # optional, leaving blank defaults to True
+
+    username: USERNAME
+    # password: 
+
+    private_key_file: PRIVATEKEY
+    # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
+    # add_missing_keys: True      # optional, leaving blank defaults to False
+
+    tags:
+      - service:ssh
+      - domain:sol.milkyway
+      - environment:production
+      - host:coreos
+      - integration:sshcheck
+      - auth:sshkey 
+      - class:virtualmachine
+
+
+  - host: hydra.sol.milkyway
+    # port: 22                    # optional, leaving blank defaults to port 22
+    # sftp_check: True            # optional, leaving blank defaults to True
+
+    username: USERNAME
+    # password: 
+
+    private_key_file: PRIVATEKEY
+    # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
+    # add_missing_keys: True      # optional, leaving blank defaults to False
+
+    tags:
+      - service:ssh
+      - domain:sol.milkyway
+      - environment:production
+      - host:coreos
+      - integration:sshcheck
+      - auth:sshkey 
+      - class:virtualmachine
+
+
+  - host: nix.sol.milkyway
+    # port: 22                    # optional, leaving blank defaults to port 22
+    # sftp_check: True            # optional, leaving blank defaults to True
+
+    username: USERNAME
+    # password: 
+
+    private_key_file: PRIVATEKEY
+    # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
+    # add_missing_keys: True      # optional, leaving blank defaults to False
+
+    tags:
+      - service:ssh
+      - domain:sol.milkyway
+      - environment:production
+      - host:coreos
+      - integration:sshcheck
+      - auth:sshkey 
+      - class:virtualmachine
+
+
+  - host: sol.sol.milkyway
+    # port: 22                    # optional, leaving blank defaults to port 22
+    # sftp_check: True            # optional, leaving blank defaults to True
+
+    username: USERNAME
+    password: PASSWORD
+
+    # private_key_file: /SaturnPool/Keys/home/NGINX 
+    # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
+    # add_missing_keys: True      # optional, leaving blank defaults to False
+
+    tags:
+      - service:ssh
+      - domain:sol.milkyway
+      - environment:production
+      - host:edgeos
+      - integration:sshcheck
+      - auth:password 
+      - class:hardware
+      - subclass:networking
+
+
+  - host: mercury.sol.milkyway
+    # port: 22                    # optional, leaving blank defaults to port 22
+    # sftp_check: True            # optional, leaving blank defaults to True
+
+    username: USERNAME
+    password: PASSWORD
+
+    # private_key_file: /SaturnPool/Keys/home/NGINX 
+    # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
+    # add_missing_keys: True      # optional, leaving blank defaults to False
+
+    tags:
+      - service:ssh
+      - domain:sol.milkyway
+      - environment:production
+      - host:edgeos
+      - integration:sshcheck
+      - auth:password
+      - class:hardware
+      - subclass:networking
+
+  - host: hubble.sol.milkyway
+    # port: 22                    # optional, leaving blank defaults to port 22
+    # sftp_check: True            # optional, leaving blank defaults to True
+
+    username: USERNAME
+    password: PASSWORD
+
+    # private_key_file: /SaturnPool/Keys/home/NGINX 
+    # private_key_type:           # optional, private key type rsa or ecdsa (defaults to rsa)
+    # add_missing_keys: True      # optional, leaving blank defaults to False
+
+    tags:
+      - service:ssh
+      - domain:sol.milkyway
+      - environment:production
+      - host:edgeos
+      - integration:sshcheck
+      - auth:password
+      - class:hardware
+      - subclass:networking

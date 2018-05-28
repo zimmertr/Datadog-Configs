@@ -1,0 +1,134 @@
+init_config:
+
+instances:
+  - name: SSH
+    host: tjzimmerman.com
+    port: 22
+    timeout: 1
+    collect_response_time: true
+
+    tags:
+      - service:ssh
+      - integration:tcpcheck
+      - environment:production
+      - location:public
+  
+  - name: HTTPS 
+    host: tjzimmerman.com
+    port: 443
+    timeout: 1
+    collect_response_time: true
+
+    tags:
+      - service:https
+      - integration:tcpcheck
+      - environment:production
+      - location:public
+
+  - name: HTTP
+    host: tjzimmerman.com
+    port: 80
+    timeout: 1
+    collect_response_time: true
+
+    tags:
+      - service:http
+      - integration:tcpcheck
+      - environment:production
+      - location:public
+
+  - name: VPN
+    host: tjzimmerman.com
+    port: 8050
+    timeout: 1
+    collect_response_time: true
+
+    tags:
+      - service:vpn
+      - integration:tcpcheck
+      - environment:production
+      - location:public
+
+  - name: Plex 
+    host: 24.17.203.10
+    port: 32400
+    timeout: 1
+    collect_response_time: true
+
+    tags:
+      - service:plex
+      - integration:tcpcheck
+      - environment:personal
+      - location:public
+
+  - name: Deluge
+    host: 24.17.203.10 
+    port: 8112
+    timeout: 1
+    collect_response_time: true
+
+    tags:
+      - service:deluge
+      - integration:tcpcheck
+      - environment:personal
+      - location:public
+
+  - name: Apache
+    host: 24.17.203.10 
+    port: 2000
+    timeout: 1
+    collect_response_time: true
+
+    tags:
+      - service:Apache
+      - integration:tcpcheck
+      - environment:production
+      - location:public
+
+  - name: Sonarr
+    host: 24.17.203.10 
+    port: 8989
+    timeout: 1
+    collect_response_time: true
+
+    tags:
+      - service:Sonarr
+      - integration:tcpcheck
+      - environment:personal
+      - location:public
+
+  - name: Tautulli
+    host: 24.17.203.10 
+    port: 8181
+    timeout: 1
+    collect_response_time: true
+
+    tags:
+      - service:tautulli
+      - integration:tcpcheck
+      - environment:personal
+      - location:public
+
+  - name: Radarr
+    host: 24.17.203.10 
+    port: 7878
+    timeout: 1
+    collect_response_time: true
+
+    tags:
+      - service:radarr
+      - integration:tcpcheck
+      - environment:personal
+      - location:public
+
+  - name: Grafana
+    host: 24.17.203.10 
+    port: 3000
+    timeout: 1
+    collect_response_time: true
+
+    tags:
+      - service:grafana
+      - integration:tcpcheck
+      - environment:production
+      - location:public

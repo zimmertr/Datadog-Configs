@@ -1,0 +1,307 @@
+init_config:
+
+instances:
+  - name: ReverseProxy    
+    url: http://tjzimmerman.com
+    timeout: 2
+
+    method: get
+    http_response_status_code: 200
+    #include_default_headers: false
+    
+    disable_ssl_validation: false
+    # ignore_ssl_warning: false
+    
+    allow_redirects: true
+    # skip_proxy: false
+    
+    # include_content: false
+    collect_response_time: true
+    
+    # username: user
+    # password: pass
+    
+    content_match: Infrastructure 
+    # reverse_content_match: false
+
+    check_certificate_expiration: true
+    days_warning: 7
+    days_critical: 2
+
+    tags:
+       - url:https://tjzimmerman.com
+       - domain:tjzimmerman.com
+       - environment:production
+       - host:centos
+       - integration:httpcheck
+
+  - name: www
+    url: https://www.tjzimmerman.com
+    timeout: 2
+
+    method: get
+    http_response_status_code: 200
+    #include_default_headers: false
+    
+    disable_ssl_validation: false
+    # ignore_ssl_warning: false
+    
+    allow_redirects: true
+    # skip_proxy: false
+    
+    # include_content: false
+    collect_response_time: true
+    
+    # username: user
+    # password: pass
+    
+    content_match: Infrastructure 
+    # reverse_content_match: false
+
+    # check_certificate_expiration: true
+    # days_warning: 7
+    # days_critical: 2
+
+    tags:
+       - url:https://www.tjzimmerman.com
+       - domain:tjzimmerman.com
+       - environment:production
+       - host:centos
+       - integration:httpcheck
+
+  - name: Plex
+    url: https://plex.tjzimmerman.com
+    timeout: 2
+
+    method: get
+    http_response_status_code: 401
+    #include_default_headers: false
+    
+    disable_ssl_validation: false
+    # ignore_ssl_warning: false
+    
+    allow_redirects: true
+    # skip_proxy: false
+    
+    # include_content: false
+    collect_response_time: true
+    
+    username: USERNAME
+    password: PASSWORD
+    
+    # content_match: Discover
+    # reverse_content_match: false
+
+    #check_certificate_expiration: true
+    #days_warning: 7
+    #days_critical: 2
+
+    tags:
+       - url:https://www.plex.tjzimmerman.com
+       - domain:tjzimmerman.com
+       - environment:personal
+       - host:centos
+       - integration:httpcheck
+
+  - name: Deluge 
+    url: https://deluge.tjzimmerman.com
+    timeout: 2
+
+    method: get
+    http_response_status_code: 200
+    #include_default_headers: false
+    
+    disable_ssl_validation: false
+    # ignore_ssl_warning: false
+    
+    allow_redirects: true
+    # skip_proxy: false
+    
+    # include_content: false
+    collect_response_time: true
+    
+    # username: user
+    password: PASSWORD
+    
+    # content_match: Progress 
+    # reverse_content_match: false
+
+    #check_certificate_expiration: true
+    #days_warning: 7
+    #days_critical: 2
+
+    tags:
+       - url:https://deluge.tjzimmerman.com
+       - domain:tjzimmerman.com
+       - environment:personal
+       - host:docker
+       - integration:httpcheck
+
+  - name: Grafana
+    url: https://grafana.tjzimmerman.com
+    timeout: 2
+
+    method: get
+    http_response_status_code: 200
+    #include_default_headers: false
+    
+    disable_ssl_validation: false
+    # ignore_ssl_warning: false
+    
+    allow_redirects: true
+    # skip_proxy: false
+    
+    # include_content: false
+    collect_response_time: true
+    
+    username: USERNAME
+    password: PASSWORD
+    
+    content_match: Dashboard 
+    # reverse_content_match: false
+
+    #check_certificate_expiration: true
+    #days_warning: 7
+    #days_critical: 2
+
+    tags:
+       - url:https://grafana.tjzimmerman.com
+       - domain:tjzimmerman.com
+       - environment:production
+       - host:centos
+       - integration:httpcheck
+
+  - name: Sonarr
+    url: https://sonarr.tjzimmerman.com
+    timeout: 2
+
+    method: get
+    http_response_status_code: 200
+    #include_default_headers: false
+    
+    disable_ssl_validation: false
+    # ignore_ssl_warning: false
+    
+    allow_redirects: true
+    # skip_proxy: false
+    
+    # include_content: false
+    collect_response_time: true
+    
+    username: USERNAME
+    password: PASSWORD
+    
+    # content_match: Calendar 
+    # reverse_content_match: false
+
+    #check_certificate_expiration: true
+    #days_warning: 7
+    #days_critical: 2
+
+    tags:
+       - url:https://sonarr.tjzimmerman.com
+       - domain:tjzimmerman.com
+       - environment:personal
+       - host:docker
+       - integration:httpcheck
+
+  - name: Radarr
+    url: https://radarr.tjzimmerman.com
+    timeout: 2
+
+    method: get
+    http_response_status_code: 200
+    #include_default_headers: false
+    
+    disable_ssl_validation: false
+    # ignore_ssl_warning: false
+    
+    allow_redirects: true
+    # skip_proxy: false
+    
+    # include_content: false
+    collect_response_time: true
+    
+    username: USERNAME
+    password: PASSWORD
+    
+    # content_match: Calendar 
+    # reverse_content_match: false
+
+    # check_certificate_expiration: true
+    # days_warning: 7
+    # days_critical: 2
+
+    tags:
+       - url:https://radarr.tjzimmerman.com
+       - domain:tjzimmerman.com
+       - environment:personal
+       - host:docker
+       - integration:httpcheck
+
+  - name: Tautulli
+    url: https://tautulli.tjzimmerman.com
+    timeout: 2
+
+    method: get
+    http_response_status_code: 200
+    #include_default_headers: false
+    
+    disable_ssl_validation: false
+    # ignore_ssl_warning: false
+    
+    allow_redirects: true
+    # skip_proxy: false
+    
+    # include_content: false
+    collect_response_time: true
+    
+    username: USERNAME
+    password: PASSWORD
+    
+    # content_match: Activity 
+    # reverse_content_match: false
+
+    # check_certificate_expiration: true
+    # days_warning: 7
+    # days_critical: 2
+
+    tags:
+       - url:https://tautulli.tjzimmerman.com
+       - domain:tjzimmerman.com
+       - environment:personal
+       - host:docker
+
+  - name: Netdata-NGINX
+    url: https://rp.tjzimmerman.com
+    timeout: 2
+
+    method: get
+    http_response_status_code: 200
+    #include_default_headers: false
+    
+    disable_ssl_validation: false
+    # ignore_ssl_warning: false
+    
+    allow_redirects: true
+    # skip_proxy: false
+    
+    # include_content: false
+    collect_response_time: true
+    
+    username: USERNAME
+    password: PASSWORD
+    
+    # content_match: Overview
+    # reverse_content_match: false
+
+    # check_certificate_expiration: true
+    # days_warning: 7
+    # days_critical: 2
+
+    tags:
+       - url:https://rp.tjzimmerman.com
+       - domain:tjzimmerman.com
+       - environment:production
+       - host:centos
+       - integration:httpcheck
