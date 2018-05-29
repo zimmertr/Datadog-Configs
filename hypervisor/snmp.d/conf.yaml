@@ -121,7 +121,7 @@ instances:
     #OIDs
         #System
         - OID: 1.3.6.1.2.1.1.3.0
-          name: unifisys.uptime
+          name: unifi.sys.uptime
 
         
     #MIBs
