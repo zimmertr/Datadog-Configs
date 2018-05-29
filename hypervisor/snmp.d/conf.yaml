@@ -112,6 +112,10 @@ instances:
               - ifOutErrors
               - ifInUcastPkts
               - ifOutUcastPkts
+              - ifInDiscards
+              - ifOutDiscards
+              - ifInUnknownProtos
+              - ifOutUnknownProtos
 
           metric_tags:
               - tag: interface
@@ -274,6 +278,10 @@ instances:
               - ifOutErrors
               - ifInUcastPkts
               - ifOutUcastPkts
+              - ifInDiscards
+              - ifOutDiscards
+              - ifInUnknownProtos
+              - ifOutUnknownProtos
           metric_tags:
               - tag: interface
                 column: ifDescr
