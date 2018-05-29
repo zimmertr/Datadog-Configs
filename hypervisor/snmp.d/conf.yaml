@@ -3,6 +3,8 @@ init_config:
 #    ignore_nonincreasing_oid: False
 instances:
 
+
+#Unifi Access Point
   - ip_address: hubble.sol.milkyway
     port: 161
     community_string: sol.milkyway
@@ -22,22 +24,25 @@ instances:
         - model:uap-ac-pro
   
     metrics:
-
+    
+    #OIDs
+        #Load
         - OID: 1.3.6.1.4.1.2021.10.1.5.1
           name: unifi.load.5m
         - OID: 1.3.6.1.4.1.2021.10.1.5.2
           name: unifi.load.10m
         - OID: 1.3.6.1.4.1.2021.10.1.5.3
           name: unifi.load.15m
-
         - OID: 1.3.6.1.2.1.25.3.3.1.2.196608
           name: unifi.load.cpu1
 
+        #SWAP
         - OID: 1.3.6.1.4.1.2021.4.3.0
           name: unifi.swap.total
         - OID: 1.3.6.1.4.1.2021.4.4.0
           name: unifi.swap.avail
 
+        #MEM
         - OID: 1.3.6.1.4.1.2021.4.5.0
           name: unifi.mem.total
         - OID: 1.3.6.1.4.1.2021.4.6.0
@@ -51,6 +56,7 @@ instances:
         - OID: 1.3.6.1.4.1.2021.4.15.0
           name: unifi.mem.cached
 
+        #System
         - OID: 1.3.6.1.2.1.1.3.0
           name: unifi.sys.uptime
         - OID: 1.3.6.1.2.1.25.1.5.0
@@ -58,47 +64,15 @@ instances:
         - OID: 1.3.6.1.2.1.25.1.2.0
           name: unifi.sys.date
 
-
+        #Wireless Clients
         - OID: 1.3.6.1.4.1.41112.1.6.1.2.1.8.4
           name: unifi.uap.clients.5g
         - OID: 1.3.6.1.4.1.41112.1.6.1.2.1.8.2 
           name: unifi.uap.clients.2g
         
 
-        - OID: 1.3.6.1.2.1.2.2.1.21.1
-          name: unifi.uap.net.tx.queue.lo
-        - OID: 1.3.6.1.2.1.2.2.1.21.2
-          name: unifi.uap.net.tx.queue.eth0
-        - OID: 1.3.6.1.2.1.2.2.1.21.3
-          name: unifi.uap.net.tx.queue.wifi0
-        - OID: 1.3.6.1.2.1.2.2.1.21.4
-          name: unifi.uap.net.tx.queue.wifi1
-        - OID: 1.3.6.1.2.1.2.2.1.21.5
-          name: unifi.uap.net.tx.queue.ath0
-        - OID: 1.3.6.1.2.1.2.2.1.21.6
-          name: unifi.uap.net.tx.queue.vwire1
-        - OID: 1.3.6.1.2.1.2.2.1.21.7
-          name: unifi.uap.net.tx.queue.ath2
-        - OID: 1.3.6.1.2.1.2.2.1.21.8
-          name: unifi.uap.net.tx.queue.vwire3
-        - OID: 1.3.6.1.2.1.2.2.1.21.9
-          name: unifi.uap.net.tx.queue.br0
-
-
-        - MIB: UBNT-MIB.py
-          symbols: 
-              - unifiIfTable 
-              - unifiIfName
-              - unifiIfRxError
-              - unifiIfTxDropped
-              - unifiRadioIndex
-              - unifiRadioCuTotal
-              - unifiVapEntry
-              - unifiVapRxErrors
-              - unifiApSystemUplink
-              - unifiRadioGroups
-              - UBNT-UniFi-MIB
-
+    #MIBs
+        #ifTable
         - MIB: IF-MIB
           table: ifTable
           symbols:
@@ -122,7 +96,8 @@ instances:
                 column: ifDescr
                 column: ifPhysAddress
 
-  
+
+#Unifi Switch
   - ip_address: mercury.sol.milkyway
     port: 161
     community_string: sol.milkyway
@@ -143,28 +118,14 @@ instances:
   
     metrics:
 
+    #OIDs
+        #System
         - OID: 1.3.6.1.2.1.1.3.0
-          name: unifi.uptime
+          name: unifisys.uptime
 
         
-        - OID: 1.3.6.1.2.1.2.2.1.21.1
-          name: unifi.usw.net.tx.queue.port.1
-        - OID: 1.3.6.1.2.1.2.2.1.21.2
-          name: unifi.usw.net.tx.queue.port.2
-        - OID: 1.3.6.1.2.1.2.2.1.21.3
-          name: unifi.usw.net.tx.queue.port.3
-        - OID: 1.3.6.1.2.1.2.2.1.21.4
-          name: unifi.usw.net.tx.queue.port.4
-        - OID: 1.3.6.1.2.1.2.2.1.21.5
-          name: unifi.usw.net.tx.queue.port.5
-        - OID: 1.3.6.1.2.1.2.2.1.21.6
-          name: unifi.usw.net.tx.queue.port.6
-        - OID: 1.3.6.1.2.1.2.2.1.21.7
-          name: unifi.usw.net.tx.queue.port.7
-        - OID: 1.3.6.1.2.1.2.2.1.21.8
-          name: unifi.usw.net.tx.queue.port.8
-
-
+    #MIBs
+        #ifTable
         - MIB: IF-MIB
           table: ifTable
           symbols:
@@ -182,12 +143,15 @@ instances:
               - ifOutDiscards
               - ifInUnknownProtos
               - ifOutUnknownProtos
+
           metric_tags:
               - tag: interface
                 column: ifDescr
                 column: ifPhysAddress
 
-  
+ 
+
+#Ubiquiti EdgeRouter
   - ip_address: sol.sol.milkyway
     port: 161
     community_string: sol.milkyway
@@ -208,6 +172,8 @@ instances:
   
     metrics:
 
+    #OIDs
+        #Load
         - OID: 1.3.6.1.4.1.2021.10.1.5.1
           name: unifi.load.5m
         - OID: 1.3.6.1.4.1.2021.10.1.5.2
@@ -215,15 +181,19 @@ instances:
         - OID: 1.3.6.1.4.1.2021.10.1.5.3
           name: unifi.load.15m
 
+        #CPU Load
         - OID: 1.3.6.1.2.1.25.3.3.1.2.196608
           name: unifi.load.cpu1
         - OID: 1.3.6.1.2.1.25.3.3.1.2.196609
           name: unifi.load.cpu2
 
+        #SWAP
         - OID: 1.3.6.1.4.1.2021.4.3.0
           name: unifi.swap.total
         - OID: 1.3.6.1.4.1.2021.4.4.0
           name: unifi.swap.avail
+
+        #MEM
         - OID: 1.3.6.1.4.1.2021.4.5.0
           name: unifi.mem.total
         - OID: 1.3.6.1.4.1.2021.4.6.0
@@ -237,6 +207,7 @@ instances:
         - OID: 1.3.6.1.4.1.2021.4.15.0
           name: unifi.mem.cached
 
+        #System
         - OID: 1.3.6.1.2.1.1.3.0
           name: unifi.sys.uptime
         - OID: 1.3.6.1.2.1.25.1.5.0
@@ -246,7 +217,7 @@ instances:
         - OID: 1.3.6.1.2.1.25.1.2.0
           name: unifi.sys.date
 
-
+        #CPU Utilization
         - OID: 1.3.6.1.4.1.2021.11.9
           name: unifi.erlite-3.cpu.user
         - OID: 1.3.6.1.4.1.2021.11.10
@@ -254,17 +225,9 @@ instances:
         - OID: 1.3.6.1.4.1.2021.11.11
           name: unifi.erlite-3.cpu.idle
 
-          name: unifi.erlite.net.tx.queue.lo
-        - OID: 1.3.6.1.2.1.2.2.1.21.2
-          name: unifi.erlite.net.tx.queue.eth0
-        - OID: 1.3.6.1.2.1.2.2.1.21.3
-          name: unifi.erlite.net.tx.queue.eth1
-        - OID: 1.3.6.1.2.1.2.2.1.21.4
-          name: unifi.erlite.net.tx.queue.eth2
-        - OID: 1.3.6.1.2.1.2.2.1.21.5
-          name: unifi.erlite.net.tx.queue.imq0
 
-
+    #MIBs
+        #ifTable
         - MIB: IF-MIB
           table: ifTable
           symbols:
@@ -282,6 +245,7 @@ instances:
               - ifOutDiscards
               - ifInUnknownProtos
               - ifOutUnknownProtos
+          
           metric_tags:
               - tag: interface
                 column: ifDescr
