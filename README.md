@@ -1,4 +1,4 @@
-# DataDog_Configs
+# DataDog Configs
 
 ## Summary
 A collection of the configuration files I've defined for monitoring my homelab with DataDog.
